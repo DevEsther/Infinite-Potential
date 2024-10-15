@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <title>Infinite Potential</title>
+    <style>
+
+body{
+        padding-top: 80px;
+     }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays above other content */
+    background-color: rgb(84, 202, 223) !important; /* Keep your navbar background color */
+    height: fit-content;
+    padding: 10px 0;
+}
+        .navbar-brand img {
+            height: 50px; 
+        }
+        .navbar-nav {
+            margin-left: auto;
+            color: black;
+            font-weight: bold;
+        }
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                height: 40px;
+            }
+        }
+
+        .responsive-image {
+  width: 100%; 
+  height: auto; 
+  max-width: 1400px; 
+  display: block;
+  margin: 0 auto; 
+}
+
+.centered-text {
+  text-align: center; 
+  padding: 30px 0;
+  width: 100%; 
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  
+}
+
+
+.main-img {
+  width: 100%;
+  height: auto;
+  
+  
+}
+
+
+.image-text-container {
+  position: absolute;
+
+  top: 20%;
+  left: 5%; 
+  width: 90%;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.box, .box2 {
+    flex: 1;
+    min-width: 45%;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+
+.box h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .responsive-container {
+        display: block;
+        width: 100%;
+    }
+    
+    .box {
+        display: inline-block;
+        width: 100%;
+        min-width: 100%;
+    }
+    
+}
+
+
+ @media (max-width: 480px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .box, .box2 {
+        margin: 5px 0;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+} 
+
+
+
+.box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.content-flex-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .content-text-box {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        flex: 1;
+    }
+
+    .content-image-container {
+        text-align: center;
+        flex: 1;
+    }
+
+    .content-image-container img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+  
+    @media screen and (max-width: 768px) {
+        .content-flex-wrapper {
+            display: block;
+            text-align: center;
+        }
+
+        .content-text-box {
+            margin-bottom: 20px;
+        }
+
+        .content-image-container img {
+            width: 100%;
+            max-width: 300px;
+        }
+    } 
+
+
+    .stage-content-box {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .stage-flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .stage-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2, h3 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+        .stage-flex {
+            display: block;
+            text-align: left;
+        }
+
+        .stage-text {
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgb(84, 202, 223) !important;
+            height: fit-content;
+            padding: 10px 0;
+        }
+
+
+
+
+
+    
+
+       
+
+
+    </style>
+</head>
+<body style="background-color: rgb(84, 202, 223) !important;  ">
+    <header >
+        <nav class="navbar navbar-expand-sm " style="background-color: rgb(84, 202, 223) !important; ; height: fit-content;" >
+            <div class="container-fluid">
+                <a  style="background-color: black;" class="navbar-brand" href="#">
+                    <img src="./img/IPT Blue@4x.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#whitepaper">Whitepaper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tokenomics">Tokenomics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#roadmap">Roadmap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#howtobuy">How to Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://vestige.fi/asset/2342621554">Buy Now</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Join Now</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section style="padding-top: 60px;">
+        <div class="image-container" style="margin: 4px auto;">
+            <img    src="./img/IPT-X-Banner-2.png" alt="Responsive Image" class="main-img ">
+        </div>
+
+</section>
+<section>
+    <div class="image-container" style="position: relative;">
+        <img src="./img/Untitled.png" alt="Responsive Image" class="main-img" style="width: 100%; height: auto;">
+        
+        <!-- Buy Now Button -->
+        <style>
+            @keyframes bounce {
+              0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+              }
+              40% {
+                transform: translateY(-10px);
+              }
+              60% {
+                transform: translateY(-5px);
+              }
+            }
+          
+            .bounce {
+              animation: bounce 1s infinite;
+            }
+          </style>
+          
+          <a href="https://vestige.fi/asset/2342621554" id="buyNowButton" style="
+            position: absolute;
+            font-weight: bold;
+            bottom: 3px;
+            left: 200px;
+            padding: 7px 10px;
+            background-color: rgb(84, 202, 223);
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+          " class="bounce">
+            Buy Now
+          </a>
+              </div>
+</section>
+
+                  
+                  
+                
+            </div>
+            <section id="whitepaper">
+                <div style="background-color: white; padding: 20px; margin: 0 auto; max-width: 1600px;  margin-top: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div style="background-color:  rgb(84, 202, 223); font-size: 20px; font-weight: bolder; color:  black;  text-align: center; padding: 15px; font-weight: bold; margin-bottom: 15px;">
+                        IPT TOKEN  WHITEPAPER
+                    </div>
+                 <center>
+                    <p style="color: #333; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;">
+                        <h3 style="font-weight: bold;">1: Introduction</h3>
+                   
+The Infinite Potential Token(IPT) is designed to create 
+passive income through farming and staking partnerships
+while utilizing a deflationary mechanism to store and 
+build wealth. By implementing scheduled burn of 1% per
+quarter for two years, IPT addresses inflation associated 
+with staking and farming rewards.
+                    </p>
+                 </center>
+                </div>
+
+                <div style="background-color: white; padding: 20px; margin: 0 auto; max-width: 1600px;  margin-top: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                   
+                   <center>
+                    <p style="color: #333; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;">
+                        <h3 style="font-weight: bold;">2: problem</h3>
+                   
+
+                        In the DeFi space, inflation often arises from staking 
+                        and farming rewards entering the supply, which can dilute 
+                        the value of tokens over time. IPT aims to solve this problem through 
+                        strategic deflationary measures, including schedule burns, 
+                        token buybacks, and vaulting reserves tokens.
+                    </p>
+                </div>
+                   </center>
+
+                <div style="background-color: white; padding: 20px; margin: 0 auto; max-width: 1500px; margin-top: 4px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                   <center>
+                    <h2 style=" margin-bottom: 20px;">3:  The Solution</h2>
+                    <p style=" margin-bottom: 20px; color: #333; line-height: 1.6; font-size: 15px; font-weight: bold;">
+                        IPT integrates several mechanisms to ensure a long-term value preservation:
+                    </p>
+                   </center>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                        <div style="background-color: rgb(84, 202, 223); flex: 1; min-width: 250px; margin: 10px; padding: 20px; border-radius: 5px; box-shadow: 4px 4pxpx 4px rgba(0, 0, 0, 0.1);">
+                            <h3 style="text-align: center; margin-bottom: 10px; font-size: 19px;">Deflationary Mechanisms: </h3 >
+                            <p style="text-align: center;">chedule burns reduces supply to counteract inflation from staking and farming rewards</p>
+                        </div>
+                
+                        <div style="background-color: black; flex: 1; min-width: 250px; margin: 10px; padding: 20px; border-radius: 5px; box-shadow: 4px 4px 4px rgb(84, 202, 223)">
+                            <h3 style="text-align: center; margin-bottom: 10px; font-size: 19px; color: white;">passive income:</h3>
+                            <p style="text-align: center; color: #f8f8f8;"> 
+                                users can earn rewards through staking and farming partnership, allowing for synergistic compounding of multiple tokens.</p>
+                        </div>
+                
+                        <div style="background-color: rgb(84, 202, 223); flex: 1; min-width: 250px; margin: 10px; padding: 20px; border-radius: 5px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);">
+                            <h3 style="text-align: center; margin-bottom: 10px; font-size: 19px">Wealth Storage:</h3>
+                            <p style="text-align: center;"> 
+                                The deflationary nature of IPT enables holders to store and grow their wealth over time</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: white; padding: 20px; margin: 0 auto; max-width: 1600px;  margin-top: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                   
+                    <p style="color: #333; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;">
+                        <h3 style="font-weight: bold; text-align: center;">4: Technology</h3>
+                   
+
+                      <center>
+                        <p style="font-size: 14px; font-weight: bold;">
+
+                            Built on algorand blockchain, IPT benefits from:
+                            Technology</p>
+                            <p style="font-size: 18px;">
+                                <b style="color: rgb(84, 202, 223);">speed and scalability:</b> fast transaction processing with low fees</p>
+                                <p style="font-size: 18px;"><b style="color: rgb(84, 202, 223);">Decentralized and security:</b> high security and trust through Algorand’s pure Proof-of-Stake mechanisms</p>
+                                <p style="font-size: 18px;">
+
+
+                                   <b style="color: rgb(84, 202, 223);"> Interoperability:</b> opportunities for partnerships and innovative use cases within the growing Algorand ecosystem</p>
+                    </p>
+                      </center>
+                </div>
+
+                
+                <div style="background-color: white; padding: 20px; margin: 0 auto; max-width: 1600px;  margin-top: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                 <center>
+                       
+                    <p style="color: #333; font-size: 1rem; line-height: 1.6; text-align: justify; ">
+                        <h3 style="font-weight: bold;">5: Team</h3>
+                   
+
+                       
+
+
+
+The infinite Potential Token was created by @1nfinite0ne, a respected Algorand influencer committed to offering innovative investment solutions.His engagement 
+with the community fosters transparency and trust, ensuring the project aligns with the user needs.
+Team
+                    </p>
+                 </center>
+                </div>
+
+                <div class="box2" style="background-color: white; padding: 20px; margin: 0 auto;  max-width: 1600px;  margin-top: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                   
+                    <p style="color: #333; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;">
+       <center>
+        <h3 style="font-weight: bold;">6: 
+            Legal and Disclaimer</h3>
+   
+
+       
+                  IPT does not constitute financial advice. 
+                      The information provided in this white-paper is for 
+                             informational purpose only and should not be considered as 
+                        financial advice, solicitation, or an offer to buy or sell any tokens. 
+                            All participants are strongly encouraged to conduct their own 
+                              research (DYOR) and seek professional advice before engaging in
+                                  any financial activities realated to IPT
+
+                                       Legal and Disclaimer
+                                       </p>
+       </center>
+                </div>
+               
+       </section>
+    
+
+    <section>
+        <div class="responsive-container">
+            <div class="box">
+                <h2>No Guarantees</h2>
+                <p>
+                    While the Infinite Potential Token aims to create a sustainable model for passive income generation and wealth preservation through deflationary mechanisms, there are inherent risks associated with any investment in cryptocurrency. Factors such as market volatility, regulatory changes, technological challenges, and competition may affect the value of IPT. The team does not guarantee the success of the project or the future performance of the token. The Infinite Potential Token will adhere to all applicable laws and regulations in its operation. The team is committed to maintaining transparency and compliance, and any updates regarding regulatory changes will be communicated to the community.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Forward-Looking Statements</h2>
+                <p>
+                    This whitepaper may contain forward-looking statements regarding the future performance and development of the Infinite Potential Token. These statements are based on current expectations and assumptions that are subject to change. Actual results may differ materially due to various factors, including but not limited to market conditions, technological advancements, and regulatory developments.
+                </p>
+            </div>
+        </div>
+        
+        <div style="margin-top: -22px;" class="responsive-container">
+            <div class="box">
+                <h2>Regulatory Compliance</h2>
+                <p>
+                    The Infinite Potential Token will adhere to all applicable laws and regulations in its operation. The team is committed to maintaining transparency and compliance, and any updates regarding regulatory changes will be communicated to the community.
+                </p>
+            </div>
+            <div class="box">
+                <h2>User Responsibility</h2>
+                <p>
+                    By participating in the Infinite Potential Token ecosystem, users acknowledge that they understand the risks involved and accept full responsibility for their decisions. It is crucial for users to be aware of the legal and tax implications of cryptocurrency investments in their jurisdiction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: black; padding: 20px;" id="tokenomics">
+        <div style="color: white; max-width: 1000px; margin: auto; text-align: center;">
+            <h2 style="display: inline-flex; align-items: center; justify-content: center; color: rgb(84, 202, 223);">
+                $IPT TOKENOMICS <br>   TOTAL SUPPLY - 10,000,000
+               
+               
+            </h2>
+            
+ 
+                <!-- <img src="your-image-url-here.png" alt="icon" style="width: 24px; height: 24px; margin-left: 10px;"> -->
+            </h2>
+            
+            <ul style="list-style-type: none; padding-left: 0; text-align: center;">
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 20% Presale
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 20% Initial Liquidity
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 20% Staking/Farming
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 10% Scheduled Burns
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 10% Partnership
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 5% Airdrop
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 5% First Burn
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 5% Creator
+                </li>
+                <li style="margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-check" style="color: aqua; margin-right: 8px;"></i> 5% Charity
+                </li>
+            </ul>
+            
+            <a href="./tokenmic.html" style="text-decoration: none;">
+                <button style="background-color: rgb(84, 202, 223); color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Read More
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section id="roadmap" style="padding: 20px;">
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <img src="./img/mobile-phone-stock-photography-3d-computer-graphics-royalty-free-standing-next-to-a-mobile-phone-3d-villain-fd819030e14cae9b706aa557b00d42bb.png" alt="" style="width: 150px; height: auto;">
+            <h1 style="color: black; font-size: 24px; font-weight: bold;">INFINITE POTENTIAL TOKEN ROADMAP</h1>
+        </div>
+    
+       
+        <div style="margin-top: 20px;">
+            <div style="background-color: black; padding: 20px; box-shadow: 0 4px 8px white; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                <h1 style="color: rgb(84, 202, 223); font-size: 22px; font-weight: bold;">STAGE 1 - 01/2024</h1>
+                <h3 style="color: white; font-size: 16px; line-height: 1.6;">
+                    Due to legality the original plan of launching
+                    had to be abandoned and an impromptu donation
+                    drive was started. In less than 24 hours over 21k
+                    Algo were raised for the initial liquidity pool.
+                    While not the preferred method being that many
+                    people missed the window of opportunity to 
+                    donate, 2 million tokens were distributed to initial
+                    liquidity providers as reimbursement for donations.
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="content-flex-wrapper">
+            <div class="content-text-box">
+                <p>
+                    1.6 million tokens were paired with 16k Algo to create the initial LP. The LP tokens will be sent to a burn vault to ensure liquidity and prevent depletion of liquidity by creator or any large holders. Swapping begins, liquidity/price stabilizes organically.
+                    Staking and LP farming to be set up on cometa.org. Both long and short-term staking will be available with varying APR, IPT/Algo LP tokens will be able to be farmed for a high APR and no lockup period to give holders flexibility with their tokens.
+                    Airdrop, 500,000 (5%) IPT to be distributed to all holders at time of drop. Holding any amount qualifies wallet for airdrop.
+                </p>
+            </div>
+            <div class="content-image-container">
+                <img src="./img/3d-collection-with-hands-holding-banknotes2.png" alt="Banknotes Image">
+                <h2 style="color: black; font-weight: bold;">INITIAL LIQUIDITY PROVISION</h2>
+            </div>
+        </div>
+    </section>
+      
+       
+    <section>
+        <div class="stage-content-box">
+            <div class="stage-flex">
+                <h2 style="color: rgb(84, 202, 223); font-weight: bold;">STAGE 11 11/2024</h2>
+                <div class="stage-text">
+                    <h3>First burn</h3>
+                    <p>
+                        First burn. Following the airdrop (minimum of one week after), 500,000 (5%) IPT will be sent to a burn vault. 
+                        This will be done to counteract a potential selloff following the airdrop and initial liquidity provision 
+                        and give an advantage to early/pre-burn investors' partnership program.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <div class="content-flex-wrapper">
+            <div class="content-text-box">
+                <p>
+                  
+up to 5 peer projects will be adopted as 
+partners and will recieve 200,000 tokens (2%)
+each with 100,000 (1%) allotted for LP with 
+said token and 100,000 to be used for staking 
+rewards or other community incentives.
+The goal of this program is not only strengthen
+community relations but to increase liquidity
+and distribution amongst 
+inifinite potential token and partner projects.
+                </p>
+            </div>
+            <div class="content-image-container">
+                <img src="./img/3d-collection-with-hands-shaking-agreement7.png" alt="Banknotes Image">
+                <h2 style="color: black; font-weight: bold;">PARTNERSHIP PROGRAM</h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="stage-content-box">
+            <div class="stage-flex">
+                <h2 style="color: rgb(84, 202, 223); font-weight: bold;">YEAR 1&11</h2>
+                <div class="stage-text">
+                    <!-- <h3>First burn</h3> -->
+                    <p>
+                        Beginning of January 1st, 2025, quarterly burns of 
+                        100,000(1%)will commence. partnership established
+                        in stage ii will continue with staking and farming
+                        pools to be updated and rotated.
+                        NFT incorporation expored and implemented.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="howtobuy">
+        <div style="background-color: black; color: white; text-align: center; padding: 20px; border-radius: 10px; margin: 20px;">
+            <h1>HOW TO BUY</h1>
+            <h1 style="color: rgb(84, 202, 223); font-weight: bold;">$IPT TOKEN</h1>
+            <p>Ready to join the meme token? Buying meme token is simple! Click on the buy button
+                and link your Pera or Defly wallet and complete the purchase.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div style="background-color: rgb(84, 202, 223); color: black; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); flex: 1 1 300px; max-width: 600px; text-align: center; overflow: hidden;">
+                    <button style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-bottom: 10px;">BUY NOW</button>
+                    <h2 style="margin: 0; font-weight: bold;">CLICK ON THE BUY BUTTON</h2>
+                    <p style="margin: 10px 0; line-height: 1.5;">
+                        Ready to invest in the next big memecoin? Head to our buy now and grab your share of the
+                        $IPT token revolution. Don’t miss on moon ride!
+                    </p>
+                </div>
+                <div style="background-color: rgb(84, 202, 223); color: black; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); flex: 1 1 300px; max-width: 600px; text-align: center; overflow: hidden;">
+                    <h2 style="margin: 0; font-weight: bold;">CONNECT YOUR ALGO WALLET</h2>
+                    <p style="margin: 10px 0; line-height: 1.5;">Ready to invest in the next big memecoin? Head to 
+                        our buy now and grab your share of the $IPT token revolution.
+                        Don’t miss on moon ride!
+                        Connect your wallet to join the Infinite Potential
+                        Token meme coin revolution! Seamlessly participate in the fun and wild ride of our
+                        community-driven token. Don’t miss out!
+                    </p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                <div style="background-color: rgb(84, 202, 223); color: black; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); flex: 1 1 300px; max-width: 600px; text-align: center; overflow: hidden;">
+                    <!-- <button style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-bottom: 10px;">BUY NOW</button> -->
+                    <h2 style="margin: 0; font-weight: bold;">CHOOSE THE AMOUNT TO BUY</h2>
+                    <p style="margin: 10px 0; line-height: 1.5;">
+                        Choose the amount to buy and join the meme coin frenzy
+                    </p>
+                </div>
+                <div style="background-color: rgb(84, 202, 223); color: black; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); flex: 1 1 300px; max-width: 600px; text-align: center; overflow: hidden;">
+                    <h2 style="margin: 0; font-weight: bold;">BUY $IPT TOKEN</h2>
+                    <p style="margin: 10px 0; line-height: 1.5;"> 
+                        Buy $IPT token and join the meme revolution! Embrace the laughter, fun and potential gains. Secure your spot in the meme coin world.Hurry up!
+                      
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+  
+<footer style="
+background-color: #000;
+color: #fff;
+padding: 20px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+position: relative;
+margin-top: 50px;
+">
+
+<!-- Social Media Links -->
+<div style="margin-bottom: 20px;">
+  <a href="https://twitter.com/1nfinite0ne?t=x2XR_5MSShkgoEsIz6Ldiw&s=09" target="_blank" style="
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+  ">
+    <i class="fa fa-twitter" style="font-size: 24px;"></i>
+  </a>
+  <a href="https://telegram.org" target="_blank" style="
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+  ">
+    <!-- <i class="fa fa-telegram" style="font-size: 24px;"></i> -->
+  </a>
+  <a href="https://discord.com" target="_blank" style="
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+  ">
+    <!-- <i class="fa fa-discord" style="font-size: 24px;"></i> -->
+  </a>
+</div>
+
+<div style="
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+">
+  © 2024 All Rights Reserved $INFINITE POTENTIAL
+</div>
+
+
+<!-- <div style="
+  font-size: 12px;
+">
+  <a href="terms.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+  <a href="privacy.html" style="color: #fff; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+</div> -->
+</footer>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    
+    
+</body >
+</html>
