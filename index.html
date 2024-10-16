@@ -9,7 +9,9 @@
 </head>
     <title>Infinite Potential</title>
     <style>
-
+  html {
+    scroll-behavior: smooth;
+}
 body{
         padding-top: 80px;
      }
@@ -18,8 +20,8 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures navbar stays above other content */
-    background-color: rgb(84, 202, 223) !important; /* Keep your navbar background color */
+    z-index: 1000; 
+    background-color: rgb(84, 202, 223) !important; 
     height: fit-content;
     padding: 10px 0;
 }
@@ -229,7 +231,7 @@ body {
         margin-top: 10px;
     }
 
-    /* Responsive design */
+    
     @media screen and (max-width: 768px) {
         .stage-flex {
             display: block;
@@ -254,10 +256,46 @@ body {
             height: fit-content;
             padding: 10px 0;
         }
+   
 
+        @media (min-width: 768px) {
+    .content-flex-wrapper {
+        display: flex !important;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
 
+    .content-text-box {
+        flex: 1 1 50%;
+    }
 
+    .content-image-container {
+        flex: 1 1 50%;
+    }
+}
 
+        /* @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        } */
 
     
 
@@ -561,15 +599,15 @@ with the community fosters transparency and trust, ensuring the project aligns w
         </div>
     </section>
 
-    <section id="roadmap" style="padding: 20px;">
-        
-        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-            <img src="./img/mobile-phone-stock-photography-3d-computer-graphics-royalty-free-standing-next-to-a-mobile-phone-3d-villain-fd819030e14cae9b706aa557b00d42bb.png" alt="" style="width: 150px; height: auto;">
-            <h1 style="color: black; font-size: 24px; font-weight: bold;">INFINITE POTENTIAL TOKEN ROADMAP</h1>
-        </div>
-    
+   <section id="roadmap">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="./img/mobile-phone-stock-photography-3d-computer-graphics-royalty-free-standing-next-to-a-mobile-phone-3d-villain-fd819030e14cae9b706aa557b00d42bb.png" alt="" style="width: 150px; height: auto;">
+        <h1 style="color: black; font-size: 24px; font-weight: bold;">INFINITE POTENTIAL TOKEN ROADMAP</h1>
+    </div>
+   </section>
+   
        
-        <div style="margin-top: 20px;">
+        <div style="margin-top: 20px; ">
             <div style="background-color: black; padding: 20px; box-shadow: 0 4px 8px white; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
                 <h1 style="color: rgb(84, 202, 223); font-size: 22px; font-weight: bold;">STAGE 1 - 01/2024</h1>
                 <h3 style="color: white; font-size: 16px; line-height: 1.6;">
@@ -692,7 +730,7 @@ Connect your wallet to join the Infinite Potential Token DeFi revolution! Seamle
                     <!-- <button style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-bottom: 10px;">BUY NOW</button> -->
                     <h2 style="margin: 0; font-weight: bold;">CHOOSE THE AMOUNT TO BUY</h2>
                     <p style="margin: 10px 0; line-height: 1.5;">
-                        Choose the amount to buy and join the DeFi frenzy
+                        Choose the amount to buy and join the move frenzy
                     </p>
                 </div>
                 <div style="background-color: rgb(84, 202, 223); color: black; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); flex: 1 1 300px; max-width: 600px; text-align: center; overflow: hidden;">
@@ -723,7 +761,7 @@ position: relative;
 margin-top: 50px;
 ">
 
-<!-- Social Media Links -->
+
 <div style="margin-bottom: 20px;">
   <a href="https://twitter.com/1nfinite0ne?t=x2XR_5MSShkgoEsIz6Ldiw&s=09" target="_blank" style="
     color: #fff;
@@ -739,7 +777,7 @@ margin-top: 50px;
     margin: 0 10px;
     font-size: 24px;
   ">
-    <!-- <i class="fa fa-telegram" style="font-size: 24px;"></i> -->
+   
   </a>
   <a href="https://discord.com" target="_blank" style="
     color: #fff;
@@ -747,7 +785,7 @@ margin-top: 50px;
     margin: 0 10px;
     font-size: 24px;
   ">
-    <!-- <i class="fa fa-discord" style="font-size: 24px;"></i> -->
+
   </a>
 </div>
 
@@ -775,4 +813,7 @@ margin-top: 50px;
     
     
 </body >
+
+
+
 </html>
